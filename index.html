@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart: Delve Transition Generator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Delve Unfolds</h1>
+        
+        <div class="tag-section">
+            <div class="tag-group">
+                <h3>Origin Tags</h3>
+                <div class="tag-selector">
+                    <label for="originTagSelect">Add Tag:</label>
+                    <select id="originTagSelect">
+                        <option value="">Select a tag...</option>
+                    </select>
+                </div>
+                <div class="selected-tags">
+                    <h4>Selected Tags:</h4>
+                    <div id="originSelectedTags"></div>
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <div class="tag-group">
+                <h3>Destination Tags</h3>
+                <div class="tag-selector">
+                    <label for="destinationTagSelect">Add Tag:</label>
+                    <select id="destinationTagSelect">
+                        <option value="">Select a tag...</option>
+                    </select>
+                </div>
+                <div class="selected-tags">
+                    <h4>Selected Tags:</h4>
+                    <div id="destinationSelectedTags"></div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="generate-btn" id="generateBtn" onclick="generateTransition()">Generate Delve</button>
+        
+        <div id="transitionEvents" class="transition-events">
+            <div class="transition-progress" id="progressText"></div>
+            <div id="eventsContainer"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

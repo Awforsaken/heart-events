@@ -163,7 +163,7 @@ function displayTransition(originTags, destinationTags, events) {
     
     const originText = originTags.join(', ');
     const destText = destinationTags.join(', ');
-    progressText.textContent = `Delving from ${originText} to ${destText}...`;
+    progressText.textContent = `Delving from [${originText}] to [${destText}]...`;
     
     eventsContainer.innerHTML = '';
     
@@ -174,28 +174,21 @@ function displayTransition(originTags, destinationTags, events) {
             const eventDiv = document.createElement('div');
             eventDiv.className = 'event';
             
-            // Build author display with optional link
-            let authorDisplay = event.author || 'Unknown';
-            if (event.link) {
-                authorDisplay = `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="author-link">${authorDisplay}</a>`;
-            }
-            
             eventDiv.innerHTML = `
                 <div class="event-header">
-                    <div class="event-title">${event.title}</div>
-                    <button class="copy-btn" onclick="copyEventText(this)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                        </svg>
-                    </button>
+                    <div class="event-title-group">
+                        <div class="event-title">${event.title}</div>
+                       
+                    </div>
+                    <button class="copy-btn" onclick="copyEventText(${index})">Copy</button>
                 </div>
                 <div class="event-description">${event.description}</div>
                 <div class="event-footer">
-                    <div class="event-tags">
-                        ${event.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
-                    <div class="event-author">by ${authorDisplay}</div>
+                <div class="event-tags">
+                    ${event.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
+                 <div class="event-author">by ${event.author || 'Unknown'}</div>
+                 </div>
             `;
             
             eventsContainer.appendChild(eventDiv);
@@ -207,37 +200,62 @@ function displayTransition(originTags, destinationTags, events) {
 }
 
 // Store current events for copy functionality
-function copyEventText(button) {
-    // Get the specific event container that contains the clicked button
-    const eventElement = button.closest('.event');
-    if (!eventElement) return;
-    
-    // Get the title and description elements from this specific event
-    const titleElement = eventElement.querySelector('.event-title');
-    const descriptionElement = eventElement.querySelector('.event-description');
-    
-    if (!titleElement || !descriptionElement) return;
-    
-    // Extract only the text content from these two elements
-    const textToCopy = `${titleElement.textContent}
+let currentEvents = [];
 
-${descriptionElement.textContent}`;
+function generateTransition() {
+    if (selectedOriginTags.length === 0 || selectedDestinationTags.length === 0) {
+        alert('Please select at least one tag for both origin and destination.');
+        return;
+    }
+    
+    // Get all relevant tags
+    const allTags = [...new Set([...selectedOriginTags, ...selectedDestinationTags])];
+    
+    // Filter events that match any of the tags
+    let relevantEvents = transitionEvents.filter(event => 
+        event.tags.some(tag => allTags.includes(tag))
+    );
+    
+    // If we have too many events, randomly select 3-6
+    if (relevantEvents.length > 6) {
+        relevantEvents = shuffleArray(relevantEvents).slice(0, Math.floor(Math.random() * 4) + 3);
+    }
+    
+    // Sort events to create a narrative flow
+    relevantEvents = sortEventsByRelevance(relevantEvents, selectedOriginTags, selectedDestinationTags);
+    
+    // Store events for copy functionality
+    currentEvents = relevantEvents;
+    
+    displayTransition(selectedOriginTags, selectedDestinationTags, relevantEvents);
+}
+
+function copyEventText(index) {
+    const event = currentEvents[index];
+    if (!event) return;
+    
+    const textToCopy = `${event.title}
+by ${event.author || 'Unknown'}
+
+${event.description}
+
+Tags: ${event.tags.join(', ')}`;
     
     // Try modern clipboard API first
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(textToCopy).then(() => {
-            showCopyFeedback(button);
+            showCopyFeedback(index);
         }).catch(() => {
             // Fallback to older method
-            fallbackCopy(textToCopy, button);
+            fallbackCopy(textToCopy, index);
         });
     } else {
         // Fallback for older browsers
-        fallbackCopy(textToCopy, button);
+        fallbackCopy(textToCopy, index);
     }
 }
 
-function fallbackCopy(text, button) {
+function fallbackCopy(text, index) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
     textArea.style.position = 'fixed';
@@ -247,7 +265,7 @@ function fallbackCopy(text, button) {
     
     try {
         document.execCommand('copy');
-        showCopyFeedback(button);
+        showCopyFeedback(index);
     } catch (err) {
         alert('Failed to copy text. Please try selecting and copying manually.');
     }
@@ -255,15 +273,19 @@ function fallbackCopy(text, button) {
     document.body.removeChild(textArea);
 }
 
-function showCopyFeedback(button) {
-    const originalContent = button.innerHTML; // Save the SVG icon
-    button.textContent = 'Copied!'; // Replace with text
-    button.classList.add('copied');
-    
-    setTimeout(() => {
-        button.innerHTML = originalContent; // Restore the SVG icon
-        button.classList.remove('copied');
-    }, 2000);
+function showCopyFeedback(index) {
+    const buttons = document.querySelectorAll('.copy-btn');
+    if (buttons[index]) {
+        const btn = buttons[index];
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove('copied');
+        }, 2000);
+    }
 }
 
 // Utility functions for future expansion

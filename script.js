@@ -55,6 +55,7 @@ function addTag(type) {
     document.getElementById(selectId).value = '';
     
     updateTagDisplay(type);
+    updateSelectState(type);
     updateGenerateButton();
 }
 
@@ -65,6 +66,68 @@ function removeTag(type, tagToRemove) {
     if (index > -1) {
         targetArray.splice(index, 1);
         updateTagDisplay(type);
+        updateSelectState(type);
+        updateGenerateButton();
+    }
+}
+
+function updateSelectState(type) {
+    const selectId = type + 'TagSelect';
+    const select = document.getElementById(selectId);
+    const targetArray = type === 'origin' ? selectedOriginTags : selectedDestinationTags;
+    const maxTags = 2;
+    
+    if (targetArray.length >= maxTags) {
+        select.disabled = true;
+        select.style.opacity = '0.5';
+        select.style.cursor = 'not-allowed';
+    } else {
+        select.disabled = false;
+        select.style.opacity = '1';
+        select.style.cursor = 'pointer';
+    }
+}
+
+function updateTagDisplay(type) {
+    const containerId = type + 'SelectedTags';
+    const container = document.getElementById(containerId);
+    const tags = type === 'origin' ? selectedOriginTags : selectedDestinationTags;
+    
+    container.innerHTML = '';
+    
+    if (tags.length === 0) {
+        container.innerHTML = '<em style="color: #999;">No tags selected</em>';
+        return;
+    }
+    
+    tags.forEach(tag => {
+    const tagDiv = document.createElement('div');
+    const tagSpan = document.createElement('span');
+    tagSpan.className = 'tag removable';
+    tagSpan.textContent = tag;
+    tagSpan.onclick = () => removeTag(type, tag);
+    
+    tagDiv.appendChild(tagSpan);
+    container.appendChild(tagDiv);
+});
+}
+
+function updateGenerateButton() {
+    const btn = document.getElementById('generateBtn');
+    const hasOrigin = selectedOriginTags.length > 0;
+    const hasDestination = selectedDestinationTags.length > 0;
+    
+    btn.disabled = !(hasOrigin && hasDestination);
+}
+
+function removeTag(type, tagToRemove) {
+    const targetArray = type === 'origin' ? selectedOriginTags : selectedDestinationTags;
+    const index = targetArray.indexOf(tagToRemove);
+    
+    if (index > -1) {
+        targetArray.splice(index, 1);
+        updateTagDisplay(type);
+        updateSelectState(type);  // This re-enables the select
         updateGenerateButton();
     }
 }
@@ -82,11 +145,11 @@ function updateTagDisplay(type) {
     }
     
     tags.forEach(tag => {
-        const tagSpan = document.createElement('span');
-        tagSpan.className = 'tag removable';
-        tagSpan.textContent = tag;
-        tagSpan.onclick = () => removeTag(type, tag);
-        container.appendChild(tagSpan);
+        const tagDiv = document.createElement('div');
+        tagDiv.className = 'tag-wrapper';
+        tagDiv.innerHTML = `<span class="tag removable">${tag}</span>`;
+        tagDiv.querySelector('span').onclick = () => removeTag(type, tag);
+        container.appendChild(tagDiv);
     });
 }
 
@@ -163,7 +226,7 @@ function displayTransition(originTags, destinationTags, events) {
     
     const originText = originTags.join(', ');
     const destText = destinationTags.join(', ');
-    progressText.textContent = `Delving from ${originText} to ${destText}...`;
+    progressText.innerHTML = `<h1> Delving from ${originText} to ${destText}...</h1>`;
     
     eventsContainer.innerHTML = '';
     
@@ -177,24 +240,26 @@ function displayTransition(originTags, destinationTags, events) {
             // Build author display with optional link
             let authorDisplay = event.author || 'Unknown';
             if (event.link) {
-                authorDisplay = `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="author-link">${authorDisplay}</a>`;
+                authorDisplay = `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="author-link hover">${authorDisplay}</a>`;
             }
             
             eventDiv.innerHTML = `
-                <div class="event-header">
-                    <div class="event-title">${event.title}</div>
-                    <button class="copy-btn" onclick="copyEventText(this)">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="event-description">${event.description}</div>
-                <div class="event-footer">
-                    <div class="event-tags">
-                        ${event.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                <div class="event-contents">
+                    <div class="event-header">
+                        <div class="event-title">${event.title}</div>
+                        <button class="copy-btn" onclick="copyEventText(this)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="event-author">by ${authorDisplay}</div>
+                    <div class="event-description">${event.description}</div>
+                    <div class="event-footer">
+                        <div class="event-tags">
+                            ${event.tags.map(tag => `<div class="tag-wrapper"><span class="tag">${tag}</span></div>`).join('')}
+                        </div>
+                        <div class="event-author">by ${authorDisplay}</div>
+                    </div>
                 </div>
             `;
             

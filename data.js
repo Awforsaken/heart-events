@@ -9,177 +9,185 @@ const transitionEvents = [
     {
         title: "Pig farmer",
         description: "A beleaguered Derelictus pigfarmer stumbling back from the depths with her prize – a monstrous Carrion-Pig (p. 189) that’s not eaten for days",
-        tags: ["haven"],
+        tags: ["haven", "warren"],
         length: "short",
         author: "Rowan, Rook & Decard",
         link: "https://rowanrookanddecard.com/?"
     },
     {
-        title: "Broken tower",
-        description: "You hear the distant sound of hymns, but they're distorted through old speakers and mixed with the hum of machinery. Monks in robes tend to server banks like altars, their faces illuminated by the cold glow of monitors.",
-        tags: ["religion", "technology"],
-        length: "medium",
-        author: "System"
+        title: "Last ride",
+        description: "An out-of-control fairground ride, excited by the arrival of the Delvers, wrenches itself off its mounting and tumbles towards them",
+        tags: ["technology", "cursed"],
+        length: "short",
+        author: "Rowan, Rook & Decard",
+        link: "https://rowanrookanddecard.com/?"
     },
     {
-        title: "The Narrowing Path",
-        description: "The corridor ahead splits into dozens of smaller tunnels, each barely wide enough for a single person. Water drips from above, and you can hear scurrying in the walls - both rats and things that used to be rats.",
+        title: "Red saint",
+        description: "A decrowned Red Saint (p. 203), mad from decades of unanswerable prayers and exiled from the surface of the moon, rocks back and forth in a bloody antechamber – behind it, the Red Moon stretches forth eternal",
         tags: ["haven", "warren"],
         length: "short",
-        author: "System"
+        author: "Rowan, Rook & Decard",
+        link: "https://rowanrookanddecard.com/?"
     },
     {
-        title: "Abandoned Shrine",
-        description: "A small shrine sits in an alcove, its candles long since melted to wax puddles. Strange electrical burns mar the stone around it, and a faint blue glow emanates from within. Something whispers prayers in a language that predates the Heart.",
-        tags: ["religion", "technology", "occult", "ancient"],
+        title: "Flood of joy",
+        description: "A tidal wave of liquid shit accompanied by joyful trumpets and tambourines",
+        tags: ["warren"],
+        length: "short",
+        author: "Rowan, Rook & Decard",
+        link: "https://rowanrookanddecard.com/?"
+    },
+    {
+        title: "Cable trees",
+        description: "Power cables from some forgotten Vermissian project, now twisted into gnarled, tree-like formations, periodically discharge arcs of violent lightning. Scorched earth bears witness to their fury with a corpse of an unlucky delver, still clutching a bundle of metal poles in a death grip, convulses with lightning repeatedly striking its ruined form.",
+        tags: ["technology", "wild"],
         length: "medium",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
-        title: "Pest Control",
-        description: "You encounter maintenance workers in hazmat suits spraying something into the walls. They nod silently and continue their work. The smell is acrid and makes your eyes water. In the distance, you can hear the chittering of whatever they're trying to eliminate - and it's getting closer.",
-        tags: ["warren", "technology", "danger", "toxic"],
+        title: "Incense chapel",
+        description: "<i>The air itself becomes an adversary...</i> <br> Chamber choked with ritual smoke. A small font of murky water sits neglected near the threshold. Hundreds upon hundreds of tiny dots of light penetrate the smoke, the very same incense sticks producing it.  The smoke is thick enough to taste. <br><br> Those who scout will discover a small chamber to the side of main room where air is free of smoke. Going to the side chamber requires standard endurance test, crossing whole room in one go would require a hard one. Using breathing aid grants Knack on these tests.",
+        tags: ["religion", "occult"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Missing train",
+        description: "The path abruptly ends at an automated train door that opens when approached. The train carts inside windows are made of stained glass, allowing an eerie light to filter in from outside. In the middle of the train car lies a sleeping skeletal humanoid figure, wearing an ill-fitting conductor's uniform, with its head replaced by a dimly glowing lump of coal. If it awakens, it will demand to see tickets. However, any technological item can confuse it long enough for you to pass without harm. Otherwise, it resembles a rail-punk themed Butcher (p. 188).  Defeating the Conductor could act as a connection goal",
+        tags: ["religion", "technology", "connection"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Last conflict",
+        description: "Barricades and sandbags create a maze of trenches. Bullet holes pockmark the walls, and spent shell casings crunch underfoot. Ghosts of 33rd regiment hount the trenches",
+        tags: ["warren", "cursed"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+        {
+        title: "Handsand",
+        description: "<i>Give me hand, wouldn't you?</i> <br> The floor grows soft and viscous underfoot. Soon, pale hands emerge, clawing at boots and dragging at ankles, pulling downward with desperate strength.",
+        tags: ["occult", "cursed"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Oozy lab",
+        description: "Alchemical equipment lies scattered across laboratory, some still bubbling with unknown compounds. Huge puddle of smooking ooze blocks your path",
+        tags: ["cursed", "haven"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Pest control",
+        description: "A particularly insistent ratcatcher blocks the path, pushing a cart laden with toasted mystery meat. He demands either purchase or donation, warning that refusal brings terrible bad luck. <br> The meat is not rat. A waggling tail poorly hidden beneath his coat tells reflects his true allegiance. <br> Pay the toll or buy his wares, or his hidden swarm of teeth will hunt start their hunt.",
+        tags: ["warren"],
         length: "long",
-        author: "System"
-    },
-    {
-        title: "The Congregation of Wires",
-        description: "A group of the faithful has gathered around a massive junction box, treating it as an altar. They chant in binary, their voices creating an eerie harmony with the electrical humming. Their eyes have been replaced with blinking LED displays.",
-        tags: ["religion", "technology", "community", "mystical"],
-        length: "medium",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
         title: "Flooded Passage",
-        description: "The path ahead is flooded with murky water that reaches your knees. Small things move beneath the surface, and the walls are covered in a phosphorescent moss that provides dim light. The water tastes of copper and forgotten dreams.",
-        tags: ["natural", "danger", "warren", "mystical"],
+        description: "The path ahead floods with murky water reaching knee-height. Small things move beneath the surface—unseen, but felt. <br> The corridor pitches sharply downward. The only way forward is to dive.",
+        tags: ["haven", "warren"],
         length: "medium",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
-        title: "Market Whispers",
-        description: "Voices drift from ahead - haggling, bargaining, the clink of coin. But as you approach, the voices fade and you find only empty stalls and scattered goods. The air still smells of exotic spices and desperation.",
-        tags: ["commerce", "cursed", "community"],
+        title: "The cursed artist",
+        description: " <i>Obsession knows no mercy...</i> <br> Pale veins of Madman's Script grow directly from the walls—living text, pulsing with alien purpose. <br> A blind artist, long lost to the Heart's influence, endlessly traces over these growths with his own blood. His fingers are raw stumps, his work never complete. <br> He seeks for someone to replace him, AT ANY COSTS.",
+        tags: ["occult", "cursed"],
         length: "short",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
-        title: "Academic Graffiti",
-        description: "The walls are covered in equations, diagrams, and scholarly notes written in various hands. Some appear to be corrections or arguments with previous writers. The mathematics seem to bend reality around them.",
-        tags: ["academic", "community", "mystical"],
+        title: "The Psychopomp's nest",
+        description: "A mad two-headed psychopomp has built its nest of bones directly across your path. Both heads watch with unsettling intensity, protective and paranoid. Within the nest rests a single egg, soon to hatch. Inside: a perfectly ordinary drow infant and d4+1 of religious and occult artefacts <br> Mechanically it is two psychopomps.",
+        tags: ["religion", "desolate", "connection"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The burden",
+        description: "The mechanical porter still dutifully carries its cargo after centuries, unaware its master's corpse is strapped to its back.",
+        tags: ["technology"],
+        length: "medium",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Smugglers",
+        description: "<i>Witnesses are liabilities. Accomplices are assets.</i> <br> A crew of goons hauls heavy crates filled with exotic contraband. They're professional, capable, and entirely willing to eliminate anyone who sees too much. <br> Their leader is absent. In his absence, coin speaks louder than loyalty.",
+        tags: ["haven", "warren"],
+        length: "long",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The Collector's Gallery",
+        description: "A hunched figure meticulously arranges heads on pikes in perfect rows, each wearing a different mask of porcelain. He turns, eager to add fresh specimens to his collection.",
+        tags: ["cursed", "occult"],
         length: "short",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
-        title: "Industrial Decay",
-        description: "Massive rusted gears and conveyor belts fill this chamber. Everything is still now, but oil stains and worn grooves suggest this place once thundered with activity. The silence feels oppressive, like held breath.",
-        tags: ["industrial", "decay", "ancient", "mechanical"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Luxury Forgotten",
-        description: "Ornate furniture sits draped in dust and cobwebs. Crystal chandeliers hang askew, and faded tapestries tell stories of a more opulent time in the Heart's history. Gold leaf flakes from the walls like autumn leaves.",
-        tags: ["luxury", "decay", "ancient", "noble"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "The Isolation Chamber",
-        description: "A heavy door stands slightly ajar, revealing a small padded room beyond. Something has been scratching at the walls from the inside - long, desperate gouges in the padding. The scratches spell out words in a dozen languages, all meaning 'help'.",
-        tags: ["isolation", "danger", "medical", "cursed"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Toxic Garden",
-        description: "Strange plants grow here in impossible colors, fed by chemicals leaking from corroded pipes above. The air shimmers with vapors that make your vision blur at the edges. Some of the flowers turn to watch you pass.",
-        tags: ["natural", "toxic", "danger", "biological"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Forbidden Archives",
-        description: "Shelves of books stretch into darkness, but many volumes are chained shut or bear warning symbols. A few lie open, their pages burned or torn out by previous visitors. The remaining text writhes and changes when you're not looking directly at it.",
-        tags: ["academic", "forbidden", "occult", "ancient"],
-        length: "long",
-        author: "System"
-    },
-    {
-        title: "Military Remnants",
-        description: "Barricades and sandbags create a maze through this area. Bullet holes pockmark the walls, and spent shell casings crunch underfoot. Whatever battle was fought here, it ended long ago - but the ghosts of soldiers still march their patrol routes.",
-        tags: ["military", "violence", "ancient", "cursed"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "The Artist's Madness",
-        description: "Murals cover every surface, painted in pigments that seem to glow with their own light. The artwork tells a story of the Heart's transformation, but the narrative becomes increasingly abstract and disturbing toward the end.",
-        tags: ["artistic", "mystical", "ancient", "cursed"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Criminal Enterprise",
-        description: "You stumble upon what appears to be an abandoned smuggling operation. Crates are stacked high, some broken open to reveal their contents - weapons, drugs, stranger things. Fresh footprints in the dust suggest this place isn't as abandoned as it seems.",
-        tags: ["criminal", "commerce", "danger", "modern"],
-        length: "long",
-        author: "System"
-    },
-    {
-        title: "Noble Ruins",
-        description: "The remnants of a grand estate lie in ruins. Portraits line the walls, their painted eyes seeming to track your movement. A family crest is carved into the floor, its symbols pulsing faintly with eldritch energy.",
-        tags: ["noble", "decay", "ancient", "occult"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Mechanical Symphony",
-        description: "A vast chamber filled with clockwork mechanisms, all ticking in perfect unison. The sound is hypnotic, almost musical. Gears the size of wagon wheels turn slowly, their purpose lost to time but their rhythm eternal.",
-        tags: ["mechanical", "ancient", "mystical", "industrial"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Biological Nightmare",
-        description: "The walls here pulse with a life of their own. Veins and arteries run through the stone like a circulatory system. The air is warm and humid, and you can hear something that might be a heartbeat echoing from deeper chambers.",
-        tags: ["biological", "danger", "cursed", "mystical"],
-        length: "long",
-        author: "System"
-    },
-    {
-        title: "Transport Hub",
-        description: "Old rail tracks emerge from the walls and disappear again, following impossible geometries. A single train car sits on a section of track, its doors standing open. Inside, the seats are arranged to face inward, as if for some forgotten ritual.",
-        tags: ["transport", "ancient", "mystical", "technology"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "Sacred Commerce",
-        description: "A marketplace where the faithful trade in relics and blessings. Vendors hawk pieces of stained glass from destroyed cathedrals, and holy water that glows with inner light. The prices are paid not in coin, but in memories and dreams.",
-        tags: ["religion", "commerce", "sacred", "mystical"],
-        length: "long",
-        author: "System"
-    },
-    {
-        title: "Cursed Laboratory",
-        description: "Scientific equipment lies scattered across laboratory benches, some still bubbling with unknown compounds. Charts on the walls show anatomical diagrams of things that shouldn't exist. The air tastes of ozone and regret.",
-        tags: ["medical", "cursed", "academic", "toxic"],
-        length: "medium",
-        author: "System"
-    },
-    {
-        title: "The Modern Intrusion",
-        description: "Sleek steel and glass cut through the ancient stone like a knife. LED strips provide harsh white light, and the hum of air conditioning disrupts the Heart's natural rhythms. This place feels wrong, too clean, too new.",
-        tags: ["modern", "technology", "artificial"],
+        title: "The prophet's sermon",
+        description: "A eyeless preacher stands atop rubble, delivering fevered prophecies to an audience of corpses who still bow their heads in reverence. He mistakes your approach for congregation and demands tithe.",
+        tags: ["religion", "cursed"],
         length: "short",
-        author: "System"
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     },
     {
-        title: "Community Garden",
-        description: "Despite the dangers, someone has cultivated a small garden here. Vegetables grow in carefully tended plots, and a simple shrine marks the center. Notes left by gardeners form a network of communication and mutual aid.",
-        tags: ["community", "natural", "haven", "sacred"],
-        length: "medium",
-        author: "System"
+        title: "The swine prince's court",
+        description: "A massive three-headed boar sits enthroned on a mound of refuse. It judges each gift with terrible scrutiny before devouring or dismissing the bearer.",
+        tags: ["warren", "wild"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The flesh cultivation",
+        description: "Rows of pulsating fleshpods grow from the floor like obscene crops. A robed figure tends them, humming cheerfully while harvesting ripe organs.",
+        tags: ["occult", "cursed"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The ancestor's machine",
+        description: "Wall bursts as a vast brass engine churns endlessly, fed by conveyor belts carrying fragments of bone and memory. Its architect's skeleton sits in the operator's chair, hand still on the lever",
+        tags: ["technology", "cursed"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The pelagic priest",
+        description: "A waterlogged cleric preaches to schools of eyeless fish, his congregation circling endlessly in the flooded chamber. He offers baptism to all who enter, whether they consent or not.",
+        tags: ["religion", "wild"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "The miller's toll",
+        description: "A blind miller eternally grinds at his wheel, crushing anything that wanders too close into fine red dust. He insists everything must eventually be milled, and your turn is overdue.",
+        tags: ["cursed", "desolate"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     }
 ];

@@ -80,30 +80,23 @@ html {
 /* Base Styles */
 body {
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  background:
-    var(--bg-primary),
-    repeating-radial-gradient(
-      circle at 0 0,
-      rgba(0, 0, 0, 0.02) 0,
-      rgba(0, 0, 0, 0.02) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-  background-blend-mode: multiply;
-  color: var(--text-primary);
-  margin: 0;
-  padding: var(--space-4);
-  min-height: 100vh;
-  font-family: "Eczar", serif;
-  letter-spacing: 1px;
-  box-sizing: border-box;
-  background-size: cover, 200px 200px;
+    flex-direction: column;
+    align-items: center;
+    background:
+        var(--bg-primary),
+        url('assets/texture.jpg');
+    background-blend-mode: color;
+    background-size: auto, 200px 200px; /* auto for gradient, repeat size for texture */
+    background-repeat: no-repeat, repeat; /* no-repeat for gradient, repeat for texture */
+    background-position: center, top left; /* position for each layer */
+    color: var(--text-primary);
+    margin: 0;
+    padding: var(--space-4);
+    min-height: 100vh;
+    font-family: "Eczar", serif;
+    letter-spacing: 1px;
+    box-sizing: border-box;
 }
-
-
-
 
 header {
     max-width:900px;

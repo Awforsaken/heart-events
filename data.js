@@ -96,7 +96,7 @@ const transitionEvents = [
     },
     {
         title: "Flooded Passage",
-        description: "The path ahead floods with murky water reaching knee-height. Small things move beneath the surface—unseen, but felt. <br> The corridor pitches sharply downward. The only way forward is to dive.",
+        description: "The path ahead floods with murky water reaching knee-height. Small things move beneath the surface, unseen, but felt. <br> The corridor pitches sharply downward. The only way forward is to dive.",
         tags: ["haven", "warren"],
         length: "medium",
         author: "Awfor",

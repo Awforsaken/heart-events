@@ -325,7 +325,7 @@ button:disabled {
   transform: none;
   box-shadow: var(--shadow-sm);
   text-shadow: none;
-  
+  pointer-events: none;
 }
 
 .generate-btn {

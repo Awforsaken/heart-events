@@ -364,6 +364,7 @@ button:disabled {
   display: flex;
   padding: var(--space-2);
   filter:url(#noise3);
+  color: var(--red-300);
 }
 
 .copy-btn:hover, .hover:hover {
@@ -373,10 +374,6 @@ button:disabled {
   border-radius: 2px;
 }
 
-
-.copy-btn:active {
-  transform: translateY(0);
-}
 
 .copy-btn.copied {
   background: linear-gradient(145deg, #2d5016, #3d6b1f);

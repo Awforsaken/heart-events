@@ -385,6 +385,7 @@ h1 {
   text-align: center;
   filter:url(#noise2);
   color: var(--dark-300);
+  line-height: 1.2em;
 }
 
 /* Event Styles */
@@ -435,6 +436,7 @@ h1 {
   color: var(--text-accent-reverse);
   font-weight: bold;
   font-size: 1.4em;
+  line-height: 1.2em;
 }
 
 .event-author {

@@ -189,5 +189,21 @@ const transitionEvents = [
         length: "short",
         author: "Awfor",
         link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Nest of fingers",
+        description: "A small and rotund bird with very human like eyes sings a lulaby one of delvers knows. Its nest is lined with severed toes, still warm and twitching. It looks at you with what could only be described as a crooked grin.",
+        tags: ["cursed", "desolate"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Sea of flowers",
+        description: "A sea of flowers blooms ahead. Their stems are woven from razor wire, and fleshy tissue makes up its petals revealing a single eyeball at the center of each bulb. <br> Blood stress is highly likely unless clever measures are taken",
+        tags: ["cursed", "wild"],
+        length: "short",
+        author: "Awfor",
+        link: "https://danielius.vercel.app"
     }
 ];

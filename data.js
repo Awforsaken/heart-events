@@ -8,7 +8,7 @@ const availableTags = [
 const transitionEvents = [
     {
         title: "Pig farmer",
-        description: "A beleaguered Derelictus pigfarmer stumbling back from the depths with her prize – a monstrous Carrion-Pig (p. 189) that’s not eaten for days",
+        description: "A beleaguered Derelictus pigfarmer stumbling back from the depths with her prize: a monstrous Carrion Pig (p. 189) that’s not eaten for days",
         tags: ["haven", "warren"],
         length: "short",
         author: "Rowan, Rook & Decard",
@@ -16,7 +16,7 @@ const transitionEvents = [
     },
     {
         title: "Last ride",
-        description: "An out-of-control fairground ride, excited by the arrival of the Delvers, wrenches itself off its mounting and tumbles towards them",
+        description: "An out of control fairground ride, excited by the arrival of the Delvers, wrenches itself off its mounting and tumbles towards them",
         tags: ["technology", "cursed"],
         length: "short",
         author: "Rowan, Rook & Decard",
@@ -205,5 +205,33 @@ const transitionEvents = [
         length: "short",
         author: "Awfor",
         link: "https://danielius.vercel.app"
+    },
+    {
+        title: "Rats in the Walls",
+        description: "The vile courtiers of the King of Teeth gnawed tunnels here from Grist. Or did they come to Grist through these tunnels from here? It doesn't really matter: either way, there are burrows full of bones. These anthropophagi are not entirely elves or humans; but they retain enough of the elven and human mind to make it possible to parley with them.",
+        tags: ["warren"],
+        length: "short",
+        author: "Basil"
+    },
+    {
+        title: "Ferrier-Errant",
+        description: "<i>You've died. Don't worry, it happens to the best of us.</i> <br> Feral Psychopomp it trying to escort characters to delve’s most-relevant afterlife, politely but firmly.",
+        tags: ["desolate"],
+        length: "short",
+        author: "Basil"
+    },
+    {
+        "title": "The Grapes of Death",
+        "description": "Empty hut still standing, corpse-fruit growing on the unmarked grave. Eating it and drinking deep of dead memory can grant visions of path ahead: the corpse walked here in life.",
+        tags: ["haven"],
+        length: "short",
+        author: "Basil"
+    },
+    {
+        "title": "The Platform",
+        "description": "The galvanic elevator seemed like a convenient route, but it continues to go down without remorse, the doors slammed shut. How will the delvers stop this endless descent?",
+        tags: ["technology"],
+        length: "short",
+        author: "Basil"
     }
 ];

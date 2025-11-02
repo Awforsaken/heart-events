@@ -233,5 +233,40 @@ const transitionEvents = [
         tags: ["technology"],
         length: "short",
         author: "Basil"
+    },
+    {
+        title: "Watch Your Step",
+        description: "A wormlike homunculus the size of your fist yells at you from the ground. Picking him up he warns you of his equally tiny village up ahead and states there will be dire consequences if any of his people are crushed underfoot.",
+        tags: ["haven"],
+        length: "short",
+        author: "OkayNo"
+    },
+    {
+        title: "Echoing Spirit",
+        description: "Somebody you previously saw die steps into your path and begs you to acknowledge them. The more you speak to them the more they begin to rot and decay untill you either ignore them or there is nothing left.",
+        tags: ["desolate"],
+        length: "short",
+        author: "OkayNo"
+    },
+    {
+        title: "Mothfall",
+        description: "Any light sources are temporarily snuffed out by a thick cloud of otherwise harmless moths that descend from above. Delvers with a torch or other personal light source start to hear overlapping whispered bargains to never leave the dark.",
+        tags: ["wild"],
+        length: "short",
+        author: "OkayNo"
+    },
+    {
+        title: "Diminishing Returns",
+        description: "The next threshold you cross leads to a slightly smaller version of your current location which continues on into increasingly cramped copies untill you either double back or forge a new route. Your skin feels tighter each time.",
+        tags: ["warren"],
+        length: "short",
+        author: "OkayNo"
+    },
+    {
+        title: "Locomotion Surgery",
+        description: "A pair of enterprising signalbox cultists approach with a business proposition, offering to replace your lower half with cogs and pistons to bring you closer to trainlike perfection. If you refuse their proposition they sound a whistle and introduce you to their last satisfied customer.",
+        tags: ["technology"],
+        length: "short",
+        author: "OkayNo"
     }
 ];

@@ -7,38 +7,6 @@ const availableTags = [
 // Event database with tags for filtering
 const transitionEvents = [
     {
-        title: "Pig farmer",
-        description: "A beleaguered Derelictus pigfarmer stumbling back from the depths with her prize: a monstrous Carrion Pig (p. 189) that’s not eaten for days",
-        tags: ["haven", "warren"],
-        length: "short",
-        author: "Rowan, Rook & Decard",
-        link: "https://rowanrookanddecard.com/?"
-    },
-    {
-        title: "Last ride",
-        description: "An out of control fairground ride, excited by the arrival of the Delvers, wrenches itself off its mounting and tumbles towards them",
-        tags: ["technology", "cursed"],
-        length: "short",
-        author: "Rowan, Rook & Decard",
-        link: "https://rowanrookanddecard.com/?"
-    },
-    {
-        title: "Red saint",
-        description: "A decrowned Red Saint (p. 203), mad from decades of unanswerable prayers and exiled from the surface of the moon, rocks back and forth in a bloody antechamber – behind it, the Red Moon stretches forth eternal",
-        tags: ["haven", "warren"],
-        length: "short",
-        author: "Rowan, Rook & Decard",
-        link: "https://rowanrookanddecard.com/?"
-    },
-    {
-        title: "Flood of joy",
-        description: "A tidal wave of liquid shit accompanied by joyful trumpets and tambourines",
-        tags: ["warren"],
-        length: "short",
-        author: "Rowan, Rook & Decard",
-        link: "https://rowanrookanddecard.com/?"
-    },
-    {
         title: "Cable trees",
         description: "Power cables from some forgotten Vermissian project, now twisted into gnarled, tree-like formations, periodically discharge arcs of violent lightning. Scorched earth bears witness to their fury with a corpse of an unlucky delver, still clutching a bundle of metal poles in a death grip, convulses with lightning repeatedly striking its ruined form.",
         tags: ["technology", "wild"],
@@ -268,5 +236,26 @@ const transitionEvents = [
         tags: ["technology"],
         length: "short",
         author: "OkayNo"
+    },
+    {
+        title: "The Dog Thing",
+        description: "While going down the spillway, a living fluffy lap-dog barks at the party as they approach. Its leash is leading into the darkness of an tunnel and from the looks of thing, it strains as if it wants to leave what anchors it desperately. But, in the back of your minds, this all feels like an unthought-out ambush. What will the party do and is this dog actually a dog?",
+        tags: ["cursed"],
+        length: "short",
+        author: "u/Th3R3493r"
+    },
+    {
+        title: "The Trash Golem",
+        description: "A golem made of trash, blood, and mud lethargically rests and watches the party like a bored angry librarian if it could be bored or angry. Behind it, a door lays slightly ajar and the glint of something interesting creeps outside of the crack. If the party gets close to the golem, a magic mouth triggers and states in quite gnomish voice. 'Stay away. Tregore will hurt you and I am not legally responsible for the funeral.' The golem must be Tregore and it looks like it has seen better days. Maybe it will not functional?",
+        tags: ["cursed", "warren"],
+        length: "short",
+        author: "u/Th3R3493r"
+    },
+    {
+        title: "The Innocent",
+        description: "A humanoid made of mismatched body parts, random machine components, rope, twine, staples and arcane components, dressed in a painted flour sack dress and ramshackle, 'skips' (as best as they can) and greets the party like a small child with little to no fear. It smiles and its teeth are comprised of animal teeth, monster teeth, rocks and humanoid teeth. It will not lie or deceive but, it thinks like a child and may cry if pushed too hard. It does not need to eat or drink, but, it wishes to play a game or hear some jokes, maybe a story.",
+        tags: ["cursed", "occult"],
+        length: "short",
+        author: "u/Th3R3493r"
     }
 ];

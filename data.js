@@ -257,5 +257,35 @@ const transitionEvents = [
         tags: ["cursed", "occult"],
         length: "short",
         author: "u/Th3R3493r"
-    }
+    },
+    {
+        title: "Papers please",
+        description: "An up-spire guard patrol, looking for papers",
+        tags: ["haven", "technology"],
+        length: "short",
+        author: "Zeb",
+        link: "https://zebogo.itch.io/"
+    },
+    {
+        title: "Quarantine",
+        description: "The way is QUARANTINED by the OFFICE OF CLOSURE and MITIGATION",
+        tags: ["haven", "technology"],
+        length: "short",
+        author: "Zeb",
+        link: "https://zebogo.itch.io/"
+    },
+    {
+        title: "Signal box cultists",
+        description: "A tunnel-meet with the surly glow of the signal-light of a signal-box cultist coming the opposite way.",
+        tags: ["haven", "technology"],
+        length: "short",
+        author: "Mascoll"
+    },
+    {
+        title: "Vermissian service tunnels",
+        description: "Turn on the mage-lights:  Find the cultist shrine and convince/force the local cult to stop messing with the cables and light up the tunnels.",
+        tags: ["haven", "technology", "connection"],
+        length: "short",
+        author: "Mascoll"
+    }, 
 ];
